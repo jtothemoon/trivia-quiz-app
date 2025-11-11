@@ -252,7 +252,7 @@ function GameRoom() {
           ))}
         </div>
 
-        <button onClick={() => navigate('/')}>Back to Home</button>
+        <button onClick={handleLeaveRoom}>Back to Home</button>
       </div>
     );
   }
