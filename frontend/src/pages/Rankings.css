@@ -1,0 +1,112 @@
+/* Mobile-first minimal layout for Rankings */
+.rankings {
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.rankings-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.rankings-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 36px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tabs button {
+  padding: 12px;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.rankings-content {
+  min-height: 200px;
+}
+
+.loading,
+.error,
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.rankings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  align-items: center;
+}
+
+.ranking-item .rank {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ranking-item .nickname {
+  font-size: 14px;
+}
+
+.ranking-item .score {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 14px;
+}
+
+.ranking-item .wins {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .rankings {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .ranking-item {
+    grid-template-columns: 60px 1fr auto;
+  }
+}

@@ -1,0 +1,278 @@
+/* Mobile-first minimal layout */
+.home {
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.home-header {
+  margin-bottom: 16px;
+}
+
+.home-header h1 {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+}
+
+.home-header p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.nickname-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.nickname-display span {
+  font-size: 14px;
+}
+
+.change-nickname-btn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-size: 12px;
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 36px;
+  margin-bottom: 12px;
+}
+
+/* Nickname Setup */
+.nickname-setup {
+  margin-top: 24px;
+  padding: 20px;
+  border: 2px solid #007bff;
+}
+
+.nickname-setup h2 {
+  font-size: 18px;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+/* Tabs */
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tabs button {
+  padding: 12px;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.tab-content {
+  margin-top: 16px;
+}
+
+.home-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px; /* prevent zoom on iOS */
+  min-height: 44px; /* touch-friendly */
+}
+
+.difficulty-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.difficulty-btn {
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.difficulty-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.create-room-btn {
+  margin-top: 8px;
+  padding: 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.create-room-btn:disabled {
+  opacity: 0.6;
+}
+
+.home-footer {
+  margin-top: 16px;
+}
+
+.secondary-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+/* Rooms List */
+.rooms-list {
+  margin-top: 16px;
+}
+
+.empty-rooms {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-rooms p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+.room-info {
+  flex: 1;
+}
+
+.room-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.room-details {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.room-players {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.room-item button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 36px;
+  white-space: nowrap;
+}
+
+.room-item button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Rankings Preview */
+.rankings-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  align-items: center;
+}
+
+.ranking-item .rank {
+  font-weight: bold;
+  font-size: 16px;
+  color: #007bff;
+}
+
+.ranking-item .nickname {
+  font-size: 14px;
+}
+
+.ranking-item .score {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-container {
+    max-width: 480px;
+  }
+}
