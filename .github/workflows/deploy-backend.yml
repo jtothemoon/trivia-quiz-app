@@ -64,18 +64,18 @@ jobs:
             sudo docker stop trivia-backend || true
             sudo docker rm trivia-backend || true
 
-            # Run new container
+            # Run new container with properly formatted private key
             sudo docker run -d \
               --name trivia-backend \
               -p 3000:3000 \
               -e NODE_ENV=production \
               -e PORT=3000 \
-              -e FRONTEND_URL=$FRONTEND_URL \
+              -e FRONTEND_URL="$FRONTEND_URL" \
               -e TRIVIA_API_URL=https://opentdb.com/api.php \
-              -e FIREBASE_PROJECT_ID=$FIREBASE_PROJECT_ID \
+              -e FIREBASE_PROJECT_ID="$FIREBASE_PROJECT_ID" \
               -e FIREBASE_PRIVATE_KEY=$'$FIREBASE_PRIVATE_KEY' \
-              -e FIREBASE_CLIENT_EMAIL=$FIREBASE_CLIENT_EMAIL \
-              -e FIREBASE_DATABASE_URL=$FIREBASE_DATABASE_URL \
+              -e FIREBASE_CLIENT_EMAIL="$FIREBASE_CLIENT_EMAIL" \
+              -e FIREBASE_DATABASE_URL="$FIREBASE_DATABASE_URL" \
               --restart unless-stopped \
               $ECR_REGISTRY/trivia-backend:latest
 
